@@ -598,4 +598,5 @@ if filename:
 
     print('Обработка завершена')
     print('Результат сохранён в', filename)
+    wait = input('Нажмите ENTER чтобы закрыть программу')
 
