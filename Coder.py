@@ -550,7 +550,8 @@ if filename:
         output_string = []
         for let in code_cut:
             output_string.append(encode_dict[let])
-        out_txt = open(filename.split('.')[0] + '.txt', 'w')
+        filename = filename.split('.')[0] + '.txt'
+        out_txt = open(filename, 'w')
         out_txt.write(''.join(output_string))
         out_txt.close()
 
@@ -592,5 +593,9 @@ if filename:
                 if w * i + j < len(out_code) - 1:
                     print(j, i)
                     pixel = image.putpixel((j, i), out_code[w * i + j])
-        image = image.save(filename.split('.')[0] + '.png')
+        filename = filename.split('.')[0] + '.png'
+        image = image.save(filename)
+
+    print('Обработка завершена')
+    print('Результат сохранён в', filename)
 
